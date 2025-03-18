@@ -25,7 +25,7 @@ const FloatingButton = () => {
         
         <a 
           href="tel:+5511987654321" 
-          className="flex items-center bg-corporate-blue text-white px-4 py-2 rounded-full shadow-lg hover:bg-corporate-darkBlue transition-all duration-300"
+          className="flex items-center bg-black text-[#D4AF37] px-4 py-2 rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300"
         >
           <span className="mr-2">Ligar</span>
           <Phone size={18} />
@@ -33,7 +33,7 @@ const FloatingButton = () => {
         
         <a 
           href="mailto:contato@contabilidade.com" 
-          className="flex items-center bg-corporate-blue text-white px-4 py-2 rounded-full shadow-lg hover:bg-corporate-darkBlue transition-all duration-300"
+          className="flex items-center bg-black text-[#D4AF37] px-4 py-2 rounded-full shadow-lg hover:bg-gray-900 transition-all duration-300"
         >
           <span className="mr-2">E-mail</span>
           <Mail size={18} />
@@ -43,7 +43,7 @@ const FloatingButton = () => {
       {/* Main Button */}
       <button
         onClick={toggleMenu}
-        className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-corporate-blue hover:bg-corporate-darkBlue'} text-white`}
+        className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-black hover:bg-gray-900'} ${isOpen ? 'text-white' : 'text-[#D4AF37]'}`}
       >
         {isOpen ? (
           <X size={24} />

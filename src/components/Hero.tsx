@@ -3,16 +3,16 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-white to-corporate-gray relative overflow-hidden">
+    <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-white to-gray-100 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-5"></div>
       
       {/* Decorative elements */}
-      <div className="absolute top-40 right-10 w-72 h-72 bg-corporate-blue/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-corporate-lightBlue/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
+          <div className="inline-block bg-black/10 text-black font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
             Contabilidade Digital
           </div>
           
