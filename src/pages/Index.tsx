@@ -8,7 +8,6 @@ import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
 import Plans from '../components/Plans';
 import Testimonials from '../components/Testimonials';
-import UsefulLinks from '../components/UsefulLinks';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
 
@@ -29,7 +28,6 @@ const Index = () => {
         <Team />
         <Plans />
         <Testimonials />
-        <UsefulLinks />
         <Contact />
       </main>
       

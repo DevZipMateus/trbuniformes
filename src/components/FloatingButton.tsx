@@ -31,7 +31,7 @@ const FloatingButton = () => {
           href="https://wa.me/5511987654321" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center bg-emerald-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-emerald-600 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
         >
           <span className="mr-2">WhatsApp</span>
           <div className="w-6 h-6">
@@ -41,7 +41,7 @@ const FloatingButton = () => {
         
         <a 
           href="tel:+5511987654321" 
-          className="flex items-center bg-neutral-800 text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
         >
           <span className="mr-2">Ligar</span>
           <Phone size={18} />
@@ -49,7 +49,7 @@ const FloatingButton = () => {
         
         <a 
           href="mailto:contato@contabilidade.com" 
-          className="flex items-center bg-neutral-800 text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
         >
           <span className="mr-2">E-mail</span>
           <Mail size={18} />
@@ -60,9 +60,9 @@ const FloatingButton = () => {
       <button
         onClick={toggleMenu}
         className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 
-          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-emerald-500 hover:bg-emerald-600'} 
-          ${isOpen ? 'text-white' : 'text-white'} 
-          ${isPulsing && !isOpen ? 'animate-pulse shadow-emerald-500/50' : ''}`}
+          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-black hover:bg-neutral-900'} 
+          ${isOpen ? 'text-white' : 'text-amber-400'} 
+          ${isPulsing && !isOpen ? 'animate-pulse shadow-amber-400/50' : ''}`}
       >
         {isOpen ? (
           <X size={24} />
