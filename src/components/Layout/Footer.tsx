@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'luc
 
 const Footer = () => {
   return (
-    <footer className="bg-corporate-darkBlue text-white">
+    <footer className="bg-black text-white">
       <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div className="animate-fade-in">
             <h3 className="text-xl font-semibold mb-6">Contato</h3>
@@ -31,75 +31,37 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors duration-300 inline-block">Início</a>
+                <a href="#" className="hover:text-amber-400 transition-colors duration-300 inline-block">Início</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-gray-300 transition-colors duration-300 inline-block">Sobre Nós</a>
+                <a href="#about" className="hover:text-amber-400 transition-colors duration-300 inline-block">Sobre Nós</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-gray-300 transition-colors duration-300 inline-block">Serviços</a>
+                <a href="#services" className="hover:text-amber-400 transition-colors duration-300 inline-block">Serviços</a>
               </li>
               <li>
-                <a href="#news" className="hover:text-gray-300 transition-colors duration-300 inline-block">Notícias</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-gray-300 transition-colors duration-300 inline-block">Contato</a>
+                <a href="#contact" className="hover:text-amber-400 transition-colors duration-300 inline-block">Contato</a>
               </li>
             </ul>
           </div>
           
-          {/* Useful Links */}
+          {/* Social Media */}
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-xl font-semibold mb-6">Links Úteis</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="hover:text-gray-300 transition-colors duration-300 inline-block">Agenda Tributária</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300 transition-colors duration-300 inline-block">Tabelas Práticas</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300 transition-colors duration-300 inline-block">Formulários Diversos</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300 transition-colors duration-300 inline-block">Perguntas Frequentes</a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Social Media and Newsletter */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <h3 className="text-xl font-semibold mb-6">Redes Sociais</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors duration-300 p-2 rounded-full">
+              <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors duration-300 p-2 rounded-full">
+              <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors duration-300 p-2 rounded-full">
+              <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors duration-300 p-2 rounded-full">
+              <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Linkedin size={20} />
               </a>
             </div>
-            
-            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-            <p className="text-sm mb-4">Receba nossas atualizações por e-mail</p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Seu e-mail"
-                className="bg-white/10 text-white rounded-l-md px-4 py-2 w-full focus:outline-none focus:ring-1 focus:ring-corporate-lightBlue placeholder:text-white/60"
-              />
-              <button
-                type="submit"
-                className="bg-corporate-lightBlue hover:bg-corporate-blue text-white rounded-r-md px-4 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-corporate-lightBlue/50"
-              >
-                Enviar
-              </button>
-            </form>
           </div>
         </div>
         
