@@ -35,9 +35,13 @@ const Hero = () => {
               href="https://wa.me/5511987654321" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-black hover:bg-neutral-900 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 border-2 border-amber-400 shadow-lg"
+              className="bg-amber-400 hover:bg-amber-500 text-black px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 border-2 border-black shadow-lg font-medium"
             >
-              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
+              <img 
+                src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" 
+                alt="WhatsApp" 
+                className="w-5 h-5 invert" 
+              />
               <span>Solicitar Orçamento</span>
             </a>
             <a 

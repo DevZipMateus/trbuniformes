@@ -24,7 +24,7 @@ const FloatingButton = () => {
   };
   
   return (
-    <div className={`fixed ${isMobile ? 'bottom-14 right-4' : 'bottom-8 right-8'} z-50`}>
+    <div className={`fixed ${isMobile ? 'bottom-14 right-6' : 'bottom-8 right-8'} z-50`}>
       {/* Contact Options */}
       <div className={`flex flex-col-reverse items-end mb-3 space-y-reverse space-y-2 transition-all duration-500 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <a 
