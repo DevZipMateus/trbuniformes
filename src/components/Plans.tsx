@@ -175,7 +175,7 @@ const Plans = () => {
             Precisa de um plano personalizado para sua empresa?
           </p>
           <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-black hover:bg-neutral-900 text-amber-400 rounded-md transition-all duration-300 gap-2">
-            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
+            
             <span>Solicitar proposta personalizada</span>
           </a>
         </div>
