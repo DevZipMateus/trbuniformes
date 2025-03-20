@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Phone, Mail, X } from 'lucide-react';
+import { MessageCircle, Phone, Mail, X, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const FloatingButton = () => {
@@ -31,35 +31,33 @@ const FloatingButton = () => {
           href="https://wa.me/5511987654321" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
-          <span className="mr-2">WhatsApp</span>
-          <div className="w-5 h-5">
-            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
-          </div>
+          <span className="mr-1">WhatsApp</span>
+          <ArrowRight size={16} />
         </a>
         
         <a 
           href="tel:+5511987654321" 
-          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
-          <span className="mr-2">Ligar</span>
-          <Phone size={18} />
+          <span className="mr-1">Ligar</span>
+          <ArrowRight size={16} />
         </a>
         
         <a 
           href="mailto:contato@contabilidade.com" 
-          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-full shadow-lg hover:bg-neutral-900 transition-all duration-300"
+          className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
-          <span className="mr-2">E-mail</span>
-          <Mail size={18} />
+          <span className="mr-1">E-mail</span>
+          <ArrowRight size={16} />
         </a>
       </div>
       
       {/* Main Button */}
       <button
         onClick={toggleMenu}
-        className={`p-4 ${isMobile ? 'p-3' : 'p-4'} rounded-full flex items-center justify-center transition-all duration-300 border-2 border-black
+        className={`p-4 ${isMobile ? 'p-3' : 'p-4'} rounded-full flex items-center justify-center transition-all duration-300 
           ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-amber-400 hover:bg-amber-500'} 
           ${isOpen ? 'text-white' : 'text-black'} 
           ${isPulsing && !isOpen ? 'animate-pulse' : ''}

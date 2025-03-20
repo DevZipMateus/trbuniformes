@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Contact = () => {
@@ -40,9 +40,10 @@ const Contact = () => {
                 href="https://wa.me/5511987654321" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg inline-block transition-colors"
+                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                Enviar mensagem
+                <span>Enviar mensagem</span>
+                <ArrowRight size={18} />
               </a>
             </div>
           </div>
@@ -57,9 +58,10 @@ const Contact = () => {
               <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
               <a 
                 href="tel:+5511987654321"
-                className="bg-neutral-800 hover:bg-neutral-900 text-amber-400 px-6 py-2 rounded-lg inline-block transition-colors"
+                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                (11) 98765-4321
+                <span>(11) 98765-4321</span>
+                <ArrowRight size={18} />
               </a>
             </div>
           </div>
@@ -74,9 +76,10 @@ const Contact = () => {
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
               <a 
                 href="mailto:contato@contabilidade.com"
-                className="bg-neutral-800 hover:bg-neutral-900 text-amber-400 px-6 py-2 rounded-lg inline-block transition-colors"
+                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
-                contato@contabilidade.com
+                <span>contato@contabilidade.com</span>
+                <ArrowRight size={18} />
               </a>
             </div>
           </div>

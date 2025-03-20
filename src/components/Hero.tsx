@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -35,20 +36,21 @@ const Hero = () => {
               href="https://wa.me/5511987654321" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-amber-400 hover:bg-amber-500 text-black px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 border-2 border-black shadow-lg font-medium"
+              className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium"
             >
               <img 
                 src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" 
                 alt="WhatsApp" 
-                className="w-5 h-5 invert" 
+                className="w-5 h-5" 
               />
               <span>Solicitar Orçamento</span>
             </a>
             <a 
               href="#services" 
-              className="bg-white hover:bg-gray-50 text-black border border-amber-400/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm"
+              className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium"
             >
-              Nossos serviços
+              <span>Nossos serviços</span>
+              <ArrowRight size={18} className="text-amber-400" />
             </a>
           </div>
         </div>
