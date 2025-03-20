@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -101,7 +100,7 @@ const Plans = () => {
               )}>
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full absolute top-4 right-4">
+                  <div className="bg-black text-amber-400 text-xs font-semibold px-3 py-1 rounded-full absolute top-4 right-4">
                     MAIS POPULAR
                   </div>
                 )}
@@ -123,17 +122,10 @@ const Plans = () => {
                   href="https://wa.me/5511987654321" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={cn(
-                    "block text-center py-3 px-6 rounded-lg transition-colors duration-300 w-full",
-                    plan.popular 
-                      ? 'bg-emerald-500 hover:bg-emerald-600 text-white' 
-                      : 'bg-neutral-800 hover:bg-neutral-900 text-amber-400'
-                  )}
+                  className="block text-center py-3 px-6 rounded-lg transition-colors duration-300 w-full bg-black hover:bg-neutral-900 text-amber-400"
                 >
                   <div className="flex items-center justify-center gap-2">
-                    {plan.popular && (
-                      <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-5 h-5" />
-                    )}
+                    <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
                     <span>Solicitar Plano</span>
                   </div>
                 </a>
@@ -148,7 +140,7 @@ const Plans = () => {
                       <div className={cn(
                         "p-1 rounded-full mr-3 mt-0.5 flex-shrink-0",
                         feature.included 
-                          ? "bg-emerald-100 text-emerald-600" 
+                          ? "bg-amber-100 text-amber-600" 
                           : "bg-neutral-100 text-neutral-400"
                       )}>
                         {feature.included ? (
@@ -180,9 +172,9 @@ const Plans = () => {
             href="https://wa.me/5511987654321" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn-primary inline-flex items-center gap-2"
+            className="inline-flex items-center justify-center px-6 py-3 bg-black hover:bg-neutral-900 text-amber-400 rounded-md transition-all duration-300 gap-2"
           >
-            <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-5 h-5" />
+            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
             <span>Solicitar proposta personalizada</span>
           </a>
         </div>

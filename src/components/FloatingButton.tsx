@@ -59,9 +59,9 @@ const FloatingButton = () => {
       {/* Main Button */}
       <button
         onClick={toggleMenu}
-        className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 
-          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-black hover:bg-neutral-900'} 
-          ${isOpen ? 'text-white' : 'text-amber-400'} 
+        className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 border-2 border-black
+          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-amber-400 hover:bg-amber-500'} 
+          ${isOpen ? 'text-white' : 'text-black'} 
           ${isPulsing && !isOpen ? 'animate-pulse shadow-amber-400/50' : ''}`}
       >
         {isOpen ? (
