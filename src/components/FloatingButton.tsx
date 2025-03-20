@@ -24,7 +24,7 @@ const FloatingButton = () => {
   };
   
   return (
-    <div className={`fixed ${isMobile ? 'bottom-4 right-4' : 'bottom-6 right-6'} z-50`}>
+    <div className={`fixed ${isMobile ? 'bottom-6 right-4' : 'bottom-8 right-8'} z-50`}>
       {/* Contact Options */}
       <div className={`flex flex-col-reverse items-end mb-4 space-y-reverse space-y-3 transition-all duration-500 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <a 
@@ -59,15 +59,17 @@ const FloatingButton = () => {
       {/* Main Button */}
       <button
         onClick={toggleMenu}
-        className={`p-4 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 border-2 border-black
+        className={`p-4 ${isMobile ? 'p-3.5' : 'p-4'} rounded-full shadow-xl flex items-center justify-center transition-all duration-300 border-2 border-black
           ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-amber-400 hover:bg-amber-500'} 
           ${isOpen ? 'text-white' : 'text-black'} 
-          ${isPulsing && !isOpen ? 'animate-pulse shadow-amber-400/50' : ''}`}
+          ${isPulsing && !isOpen ? 'animate-pulse shadow-amber-400/50' : ''}
+          transform hover:scale-105 active:scale-95`}
+        aria-label={isOpen ? "Fechar menu de contato" : "Abrir menu de contato"}
       >
         {isOpen ? (
-          <X size={24} />
+          <X size={isMobile ? 20 : 24} />
         ) : (
-          <div className="w-7 h-7">
+          <div className={`${isMobile ? 'w-6 h-6' : 'w-7 h-7'}`}>
             <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
           </div>
         )}
