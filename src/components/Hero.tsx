@@ -11,11 +11,11 @@ const Hero = () => {
       
       {/* Decorative elements */}
       <div className="absolute top-40 right-10 w-72 h-72 bg-amber-400/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block bg-emerald-500/90 text-white font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
+          <div className="inline-block bg-amber-500/90 text-white font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
             Contabilidade Digital
           </div>
           
@@ -32,9 +32,9 @@ const Hero = () => {
               href="https://wa.me/5511987654321" 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2"
+              className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2"
             >
-              <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-5 h-5" />
+              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
               <span>Solicitar Orçamento</span>
             </a>
             <a href="#services" className="btn-secondary">

@@ -35,7 +35,7 @@ const FloatingButton = () => {
         >
           <span className="mr-2">WhatsApp</span>
           <div className="w-6 h-6">
-            <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-full h-full object-contain" />
+            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
           </div>
         </a>
         
@@ -68,7 +68,7 @@ const FloatingButton = () => {
           <X size={24} />
         ) : (
           <div className="w-7 h-7">
-            <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-full h-full object-contain" />
+            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
           </div>
         )}
       </button>
