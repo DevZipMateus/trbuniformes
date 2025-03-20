@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Phone, Mail, X, ArrowRight } from 'lucide-react';
+import { MessageCircle, Phone, Mail, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const FloatingButton = () => {
@@ -34,7 +34,6 @@ const FloatingButton = () => {
           className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
           <span className="mr-1">WhatsApp</span>
-          <ArrowRight size={16} />
         </a>
         
         <a 
@@ -42,7 +41,6 @@ const FloatingButton = () => {
           className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
           <span className="mr-1">Ligar</span>
-          <ArrowRight size={16} />
         </a>
         
         <a 
@@ -50,14 +48,13 @@ const FloatingButton = () => {
           className="flex items-center bg-black text-amber-400 px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium"
         >
           <span className="mr-1">E-mail</span>
-          <ArrowRight size={16} />
         </a>
       </div>
       
       {/* Main Button */}
       <button
         onClick={toggleMenu}
-        className={`p-4 ${isMobile ? 'p-3' : 'p-4'} rounded-full flex items-center justify-center transition-all duration-300 
+        className={`${isMobile ? 'p-3' : 'p-4'} rounded-full flex items-center justify-center transition-all duration-300 
           ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-amber-400 hover:bg-amber-500'} 
           ${isOpen ? 'text-white' : 'text-black'} 
           ${isPulsing && !isOpen ? 'animate-pulse' : ''}

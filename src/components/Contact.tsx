@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Contact = () => {
@@ -43,7 +42,6 @@ const Contact = () => {
                 className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
                 <span>Enviar mensagem</span>
-                <ArrowRight size={18} />
               </a>
             </div>
           </div>
@@ -61,7 +59,6 @@ const Contact = () => {
                 className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
                 <span>(11) 98765-4321</span>
-                <ArrowRight size={18} />
               </a>
             </div>
           </div>
@@ -79,7 +76,6 @@ const Contact = () => {
                 className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
               >
                 <span>contato@contabilidade.com</span>
-                <ArrowRight size={18} />
               </a>
             </div>
           </div>
