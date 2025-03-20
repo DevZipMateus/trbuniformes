@@ -1,32 +1,41 @@
 
 import React from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-white to-gray-100 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-5"></div>
+    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-neutral-900 to-neutral-800 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
-      <div className="absolute top-40 right-10 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 bg-amber-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block bg-black/10 text-black font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
+          <div className="inline-block bg-emerald-500/90 text-white font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
             Contabilidade Digital
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{ animationDelay: '0.1s' }}>
             Soluções contábeis inteligentes para empresas de todos os portes
           </h1>
           
-          <p className="text-xl text-gray-600 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg text-amber-200 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Entre em contato conosco e solicite um orçamento para começar a usar hoje mesmo nossa contabilidade digital e eficiente.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <a href="#contact" className="btn-primary">
-              Solicitar Orçamento
+            <a 
+              href="https://wa.me/5511987654321" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2"
+            >
+              <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-5 h-5" />
+              <span>Solicitar Orçamento</span>
             </a>
             <a href="#services" className="btn-secondary">
               Nossos serviços

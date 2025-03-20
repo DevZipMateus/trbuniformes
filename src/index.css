@@ -7,33 +7,36 @@
 
 @layer base {
   :root {
+    /* Base color (60%): Dark neutral/black */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 45 76% 53%; /* Gold */
-    --primary-foreground: 0 0% 0%; /* Black */
+    /* Primary (30%): Gold/Amber */
+    --primary: 43 96% 56%; /* Amber-400 */
+    --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 45 76% 53%; /* Gold */
-    --accent-foreground: 0 0% 0%; /* Black */
+    /* Accent (10%): Emerald green */
+    --accent: 152 76% 44%; /* Emerald-500 */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 45 76% 53%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 43 96% 56%;
 
     --radius: 0.5rem;
 
@@ -48,33 +51,34 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 45 76% 53%; /* Gold */
-    --primary-foreground: 0 0% 0%; /* Black */
+    --primary: 43 96% 56%; /* Amber-400 */
+    --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 45 76% 53%; /* Gold */
-    --accent-foreground: 0 0% 0%; /* Black */
+    --accent: 152 76% 44%; /* Emerald-500 */
+    --accent-foreground: 0 0% 98%; 
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 45 76% 53%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 43 96% 56%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -112,11 +116,11 @@
   
   /* Buttons with hover effect */
   .btn-primary {
-    @apply bg-black hover:bg-gray-900 text-[#D4AF37] px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 shadow-sm;
+    @apply bg-neutral-800 hover:bg-neutral-900 text-amber-400 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-black border border-[#D4AF37]/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 shadow-sm;
+    @apply bg-white hover:bg-gray-50 text-neutral-800 border border-amber-400/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
   }
   
   /* Card hover effects */
@@ -126,7 +130,7 @@
   
   /* Section styling */
   .section {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-20;
   }
   
   /* Container max widths */
@@ -136,11 +140,49 @@
   
   /* Navigation link hover effect */
   .nav-link {
-    @apply relative py-2 px-3 text-gray-700 hover:text-[#D4AF37] transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#D4AF37] after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-2 px-3 text-gray-700 hover:text-amber-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full;
   }
   
   /* Image hover effect */
   .img-hover {
     @apply transition-all duration-500 hover:opacity-90 hover:scale-[1.02];
+  }
+  
+  /* Plan cards */
+  .plan-card {
+    @apply bg-white rounded-xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md border border-neutral-100;
+  }
+  
+  .plan-card-popular {
+    @apply bg-gradient-to-br from-white to-amber-50 rounded-xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-amber-200 relative;
+  }
+  
+  /* Feature list */
+  .feature-item {
+    @apply flex items-start mb-3;
+  }
+  
+  .feature-icon {
+    @apply bg-amber-100 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0 text-amber-600;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  /* Pulse animation for attention */
+  @keyframes attention-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  }
+  
+  .pulse-attention {
+    animation: attention-pulse 2s infinite;
   }
 }

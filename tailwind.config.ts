@@ -64,11 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				corporate: {
-					blue: '#000000', // Changed to black
-					lightBlue: '#D4AF37', // Changed to gold
-					darkBlue: '#111111', // Changed to dark black
-					gray: '#f8f9fa',
-					darkGray: '#343a40'
+					blue: '#1a1a1a', // Neutral darker shade (60%)
+					lightBlue: '#f59e0b', // Amber (30%)
+					darkBlue: '#111111', // Neutral darkest shade (60%)
+					gray: '#f8f9fa', // Light background
+					darkGray: '#343a40', // Dark text
+					accent: '#10b981', // Emerald green (10%)
 				}
 			},
 			borderRadius: {
@@ -148,6 +149,16 @@ export default {
 					'50%': {
 						transform: 'translateY(-5px)'
 					}
+				},
+				'pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.85',
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
@@ -158,7 +169,8 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 				'slide-in': 'slide-in 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'pulse': 'pulse 2s ease-in-out infinite'
 			}
 		}
 	},
