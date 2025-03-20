@@ -38,12 +38,8 @@ const Hero = () => {
               rel="noopener noreferrer" 
               className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium"
             >
-              <img 
-                src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" 
-                alt="WhatsApp" 
-                className="w-5 h-5" 
-              />
               <span>Solicitar Orçamento</span>
+              <ArrowRight size={18} />
             </a>
             <a 
               href="#services" 
