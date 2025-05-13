@@ -1,120 +1,76 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import { useIsMobile } from '../hooks/use-mobile';
 
 const Contact = () => {
-  const isMobile = useIsMobile();
-  
   return (
-    <section id="contact" className="section bg-neutral-100">
+    <section id="contact" className="section bg-gray-50">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block bg-black/10 text-black font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Contato
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Entre em contato conosco
           </h2>
-          <p className="text-neutral-600 text-lg">
-            Estamos prontos para atender às suas necessidades através dos nossos canais de atendimento.
+          <p className="text-gray-600 text-lg">
+            Nossa equipe de atendentes está pronta para oferecer o melhor atendimento.
           </p>
         </div>
         
-        {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {/* WhatsApp Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in">
-            <div className="bg-emerald-500 p-6 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" 
-                alt="WhatsApp" 
-                className="w-16 h-16"
-              />
+        {/* Contact Info Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* Phone */}
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center border border-gray-100 animate-fade-in">
+            <div className="bg-red-600/10 p-4 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Phone className="text-red-600" size={24} />
             </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
-              <p className="text-neutral-600 mb-4">Atendimento rápido e prático</p>
-              <a 
-                href="https://wa.me/5511987654321" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
-                <span>Enviar mensagem</span>
-              </a>
-            </div>
+            <h3 className="text-xl font-semibold mb-2">Telefone</h3>
+            <p className="text-gray-600 mb-4">Estamos disponíveis para atendê-lo</p>
+            <a href="tel:+5585991282445" className="text-red-600 font-medium hover:text-red-700 transition-colors duration-300">
+              (85) 99128-2445
+            </a>
           </div>
           
-          {/* Phone Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="bg-amber-400 p-6 flex items-center justify-center">
-              <Phone className="w-16 h-16 text-white" />
+          {/* Email */}
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center border border-gray-100 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-red-600/10 p-4 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Mail className="text-red-600" size={24} />
             </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
-              <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
-              <a 
-                href="tel:+5511987654321"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
-                <span>(11) 98765-4321</span>
-              </a>
-            </div>
+            <h3 className="text-xl font-semibold mb-2">E-mail</h3>
+            <p className="text-gray-600 mb-4">Envie sua mensagem ou solicitação</p>
+            <a href="mailto:triboconceito@gmail.com" className="text-red-600 font-medium hover:text-red-700 transition-colors duration-300">
+              triboconceito@gmail.com
+            </a>
           </div>
           
-          {/* Email Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-neutral-800 p-6 flex items-center justify-center">
-              <Mail className="w-16 h-16 text-amber-400" />
+          {/* Location */}
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center border border-gray-100 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-red-600/10 p-4 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MapPin className="text-red-600" size={24} />
             </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
-              <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
-              <a 
-                href="mailto:contato@contabilidade.com"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
-                <span>contato@contabilidade.com</span>
-              </a>
-            </div>
+            <h3 className="text-xl font-semibold mb-2">Endereço</h3>
+            <p className="text-gray-600 mb-4">Visite nossa loja física</p>
+            <p className="text-red-600 font-medium">
+              Professora Herminia Mendonça
+            </p>
           </div>
         </div>
         
-        {/* Address and Hours Card */}
-        <div className="mt-12 bg-white rounded-xl shadow-sm p-8 max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Address */}
-            <div className="flex items-start">
-              <div className="bg-neutral-100 p-3 rounded-full mr-4 flex-shrink-0">
-                <MapPin className="text-neutral-700" size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600">Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</p>
-              </div>
-            </div>
-            
-            {/* Working Hours */}
-            <div>
-              <h4 className="text-lg font-semibold text-neutral-900 mb-4">Horário de Atendimento</h4>
-              
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-neutral-600">Segunda - Sexta:</span>
-                  <span className="font-medium text-neutral-900">08:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-neutral-600">Sábado:</span>
-                  <span className="font-medium text-neutral-900">09:00 - 13:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-neutral-600">Domingo:</span>
-                  <span className="font-medium text-neutral-900">Fechado</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Google Map */}
+        <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!4v1715634579582!6m8!1m7!1sdoHo2BzF1mJ6lC_h0ZPeFQ!2m2!1d-4.168173910940571!2d-38.46268172314696!3f131.52693928653346!4f7.564316048015485!5f0.7820865974627469" 
+            width="100%" 
+            height="450" 
+            style={{ border: 0 }}
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localização TRB Uniformes"
+            className="w-full"
+          ></iframe>
         </div>
       </div>
     </section>
