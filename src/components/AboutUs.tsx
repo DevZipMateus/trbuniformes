@@ -91,7 +91,7 @@ const AboutUs = () => {
             <a href="#contact" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex animate-fade-in" style={{
             animationDelay: '0.7s'
           }}>
-              <span>Conheça Nossos Diferenciais</span>
+              
               <ArrowRight size={18} />
             </a>
           </div>
