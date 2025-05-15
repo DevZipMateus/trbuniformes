@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   return (
