@@ -20,7 +20,7 @@ const Contact = () => {
         </div>
         
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Phone */}
           <div className="bg-white p-8 rounded-lg shadow-sm text-center border border-gray-100 animate-fade-in">
             <div className="bg-red-600/10 p-4 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -58,19 +58,17 @@ const Contact = () => {
           </div>
         </div>
         
-        {/* Google Map */}
-        <div className="rounded-lg overflow-hidden shadow-md border border-gray-200 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!4v1715634579582!6m8!1m7!1sdoHo2BzF1mJ6lC_h0ZPeFQ!2m2!1d-4.168173910940571!2d-38.46268172314696!3f131.52693928653346!4f7.564316048015485!5f0.7820865974627469" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }}
-            allowFullScreen 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Localização TRB Uniformes"
-            className="w-full"
-          ></iframe>
+        {/* Call to Action */}
+        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <a 
+            href="https://wa.me/5585991282445" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black hover:bg-neutral-800 text-red-500 px-8 py-4 rounded-md transition-all inline-flex items-center justify-center gap-2 font-medium"
+          >
+            <span>Solicite um orçamento agora</span>
+            <ArrowRight size={18} />
+          </a>
         </div>
       </div>
     </section>
