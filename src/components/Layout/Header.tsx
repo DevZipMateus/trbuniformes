@@ -1,14 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Instagram, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -17,19 +14,15 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-md shadow-sm py-3' : 'bg-black py-4'}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/95 backdrop-blur-md shadow-sm py-3' : 'bg-black py-4'}`}>
       {/* Top Bar with Contact Info and Social Media */}
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
@@ -57,7 +50,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-semibold text-white transition-all duration-300 transform hover:scale-[1.02] flex items-center">
-            <img src="/lovable-uploads/d71863d5-f7cf-4eb7-83da-d78b97134d87.png" alt="TRB UNIFORMES & FARDAMENTOS" className="h-10 md:h-12" />
+            <img src="/lovable-uploads/d71863d5-f7cf-4eb7-83da-d78b97134d87.png" alt="TRB UNIFORMES & FARDAMENTOS" className="h-24 md:h-12" />
           </Link>
           
           {/* Desktop Navigation */}
@@ -69,10 +62,7 @@ const Header = () => {
           </nav>
           
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-white hover:text-red-500 focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
+          <button className="md:hidden text-white hover:text-red-500 focus:outline-none" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -87,8 +77,6 @@ const Header = () => {
           <a href="#contact" className="px-4 py-2 text-white hover:text-red-500 hover:bg-black/50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
