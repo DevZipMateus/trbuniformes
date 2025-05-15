@@ -1,40 +1,56 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+
 const Hero = () => {
   const isMobile = useIsMobile();
-  return <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-black to-neutral-900 relative overflow-hidden">
+  
+  return (
+    <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-black to-neutral-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581163898573-86d92adf7c93?ixlib=rb-4.0.3&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
       <div className="absolute top-40 right-10 w-72 h-72 bg-red-600/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-red-500/10 rounded-full blur-3xl"></div>
       
-      <div className="container-custom relative z-10 py-[60px]">
-        <div className="max-w-3xl mx-auto text-center">
-          <img src="/lovable-uploads/d71863d5-f7cf-4eb7-83da-d78b97134d87.png" alt="TRB UNIFORMES & FARDAMENTOS" className="h-24 md:h-32 mx-auto mb-8 animate-fade-in" />
+      <div className="container-custom relative z-10 py-[40px]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Text Content - Left Side */}
+          <div className="md:w-1/2 text-center md:text-left animate-fade-in">
+            <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6`} style={{
+              animationDelay: '0.1s'
+            }}>
+              Uniformes e Fardamentos<br />de Alta Qualidade
+            </h1>
+            
+            <p className="text-lg text-red-400 mb-10 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
+              Transforme suas ideias em realidade. Camisas personalizadas, fardamentos e uniformes esportivos.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row md:justify-start justify-center gap-4 animate-fade-in" style={{
+              animationDelay: '0.3s'
+            }}>
+              <a href="https://wa.me/5585991282445" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
+                <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
+                <span>Solicitar Orçamento</span>
+              </a>
+              <a href="#services" className="bg-white hover:bg-gray-50 text-black border border-red-600/20 px-6 py-3 rounded-md transition-all transform hover:scale-[1.02]">
+                Nossos serviços
+              </a>
+            </div>
+          </div>
           
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
-          animationDelay: '0.1s'
-        }}>
-            Uniformes e Fardamentos<br />de Alta Qualidade
-          </h1>
-          
-          <p className="text-lg text-red-400 mb-10 animate-fade-in" style={{
-          animationDelay: '0.2s'
-        }}>
-            Transforme suas ideias em realidade. Camisas personalizadas, fardamentos e uniformes esportivos.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
-          animationDelay: '0.3s'
-        }}>
-            <a href="https://wa.me/5585991282445" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
-              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
-              <span>Solicitar Orçamento</span>
-            </a>
-            <a href="#services" className="bg-white hover:bg-gray-50 text-black border border-red-600/20 px-6 py-3 rounded-md transition-all transform hover:scale-[1.02]">
-              Nossos serviços
-            </a>
+          {/* Logo - Right Side */}
+          <div className="md:w-1/2 flex justify-center md:justify-end animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
+            <img 
+              src="/lovable-uploads/d71863d5-f7cf-4eb7-83da-d78b97134d87.png" 
+              alt="TRB UNIFORMES & FARDAMENTOS" 
+              className="w-64 md:w-80 lg:w-96 h-auto object-contain"
+            />
           </div>
         </div>
       </div>
@@ -46,6 +62,8 @@ const Hero = () => {
           </path>
         </svg>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
